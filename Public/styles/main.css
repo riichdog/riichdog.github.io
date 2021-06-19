@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+:root{
+    --vertical-space:2rem;
+    --horiz-space: 2em;
+}
+
 body{
-    padding-left: 4em;
     font-size: 18px;
     line-height: 1.5em;
 }
 h1,h2,h3{
     line-height: 1.2em;
+    font-family: 'Libre Baskerville', serif;
 }
 body#about img{
 height: 15em;
@@ -15,4 +22,68 @@ height: 20em;
 p{
     max-width: 50em;
     
+}
+body{
+    display: grid;
+    grid-template-areas: "head head" "nav nav"  "main main" "foot foot";
+    grid-template-columns: auto 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+@media screen and (min-width: 25em){
+    body{
+        display: grid;
+        grid-template-areas: "head head" "nav main" "foot foot";
+        grid-template-columns: auto 4fr;
+        grid-template-rows: auto 1fr auto;
+    } 
+}
+body > *{
+    padding-left: var(--horiz-space);
+    padding-right: var(--horiz-space);
+}
+body>header{
+    grid-area: head;
+    
+    
+}
+body>nav{
+    grid-area: nav;
+    
+}
+
+body> nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+body> nav ul li{
+
+    padding-right: 1rem;
+}
+body>main{
+    grid-area: main;
+}
+body>footer{
+    grid-area: foot;
+}
+header,footer{
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+header h1, footer h1{
+    margin: 0;
+}
+header h1{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none ;
+    padding:0;
+
+}
+body#portfolio ul#portfolioItems lu{
+    flex-basis: 48%;
+    padding-right:2%;
 }
