@@ -35,7 +35,8 @@ font-weight: 700;
 
 font-style: normal;
 line-height: 1.2em;
-color: var(--darkest-green)
+color: var(--darkest-green);
+text-align: left;
 }
 h1 {
     line-height: 1.2em;
@@ -63,6 +64,9 @@ body#about p{
 }
 body#about{
     text-align: center;
+}
+body#resume{
+    text-align: left;
 }
 body#about img {
     
@@ -160,7 +164,9 @@ font-style: normal;
 
 }
 
-
+/* body#resume ul#resumeItems{
+    justify-content: left;
+} */
 body#portfolio ul#portfolioItems {
     display: flex;
     flex-wrap: wrap;
