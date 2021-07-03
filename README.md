@@ -1,2 +1,1 @@
 # riichdog.github.io
-# about
